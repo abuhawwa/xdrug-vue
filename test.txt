@@ -1,6 +1,6 @@
 innings:[
 	firstInnings:{
-		balls:{
+		balls:[
 			"1":{
 				ball:"1",
 				batsman:{
@@ -30,6 +30,6 @@ innings:[
 					extras:""
 				}
 			}
-		}
+		]
 	}
 ]
