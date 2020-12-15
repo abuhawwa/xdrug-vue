@@ -1,7 +1,7 @@
 innings:[
 	firstInnings:{
 		balls:[
-			"1":{
+			{
 				ball:"1",
 				batsman:{
 					name:"warner"
