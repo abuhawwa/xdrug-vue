@@ -194,3 +194,55 @@ innings:[
 ]
 
 {"overs":"10","firstInnings":{"team":"AUS","status":1,"batsmens":[{"name":"Warner"},{"name":"Finch"}],"bowlers":[{"name":"Shami"}],"balls":[{"ball":"1","batsman":{"name":"warner","slug":"batsman1","runs":2,"balls":1,"four":0,"six":0},"bowler":{"name":"shami","slug":"bowler1","runs":2,"wicket":0,"dismissal":"","extras":{"wide":0,"noball":0},"overs":"0.1"},"teamExtras":{"byes":0,"legByes":0},"score":{"overs":0.1,"runs":2,"wickets":0,"extras":0}}]},"secondInnings":{"team":"IND","status":0}}
+
+
+
+innings:[
+  overs: 10,
+	firstInnings:{
+		team:"",
+		batsmens: [],
+		bowlers: [],
+		overs:[
+			over1:{
+				balls:[
+			{
+				ball:"1",
+				batsman:{
+					name:"warner"
+					slug:"batsman1"
+					runs:2,
+					balls:1
+					four:0,
+					six:0,
+					out:false
+				},
+				bowler:{
+					name:"shami"
+					slug:"bowler1",
+					runs:2,
+					wicket:0,
+					dismissal:"",
+					extras:{
+						wide:0
+						noball:0
+					},
+					over:"0.1",
+					isExtra:false
+				},
+				teamExtras:{
+					byes:0,
+					legByes:0
+				}
+			}
+			}
+		]
+				],
+			score:{
+					overs: 0.1, (count over balls without extra and divided by 6)
+					runs: 2, (count bowler runs + team extras)
+					wickets: 0, (count bowler wickets)
+					extras:0 (count bowler extra + team extras)
+				}
+	}
+]
