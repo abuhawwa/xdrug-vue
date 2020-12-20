@@ -1,6 +1,157 @@
+# Match
+--------------
+batting team
+bowling team
+overs 
+--------------
+start match button
+
+#first inngins
+--------------
+batsman1
+batsman2
+bowler1
+--------------
+Let's Play button
+
+
+// if out add new batman#
+// if over add new bowler or select from existing bowler
+// if out and over addd new batman and bowler
+// if over limit switch to second inngins
+// if all out switch to second inngins
+// undo remove last transcation 
+// finish first inngins
+
+
+
+  batmen: {
+	name: "",
+	runs: "",
+	balls: "",
+	fours: "",
+	sixes: "",
+  },
+  bowler: {
+	name: "",
+	overs: "",
+	maidens: "",
+	runs: "",
+	wickets: "",
+	extras: {
+	  byes: "",
+	  legByes: "",
+	  wides: "",
+	  noBalls: "",
+	},
+  },
+  Innings: [
+	{
+	  firstInnings: {
+	  },
+	},
+  ],
+  
+  
+  
+  
+  
+      innings: {
+      overs: "10",
+      firstInnings: {
+        team: "AUS",
+        batsmens: [
+          {
+            name: "one",
+            slug: "batmen1",
+            runs: 58,
+            balls: 25,
+            fours: 4,
+            sixes: 2,
+          },
+          {
+            name: "two",
+            slug: "batmen2",
+            runs: 89,
+            balls: 98,
+            fours: 5,
+            sixes: 3,
+          },
+        ],
+        bowlers: [
+          {
+            name: "one",
+            slug: "bownler1",
+            overs: 9,
+            maidens: 0,
+            runs: 73,
+            wickets: 0,
+            extras: {
+              byes: 1,
+              legByes: 2,
+              wides: 3,
+              noBalls: 2,
+            },
+          },
+        ],
+        currentOver:[
+            {
+                ball:1,
+                runs:0,
+                extra:""
+            },
+            {
+              ball:2,
+              runs:0,
+              extra:""
+            },
+            {
+              ball:3,
+              runs:0,
+              extra:""
+            },
+            {
+              ball:4,
+              runs:0,
+              extra:""
+            },
+            {
+              ball:5,
+              runs:0,
+              extra:""
+            },
+            {
+              ball:6,
+              runs:1,
+              extra:"wd"             
+            },
+            {
+              ball:7,
+              runs:0,
+              extra:""
+            }
+
+        ]
+      },
+      secondInnings: {
+        team: "",
+        batsmens: [],
+        bowlers: [],
+      },
+    },
+	
+	
+	
+	
 innings:[
+  overs: 10,
 	firstInnings:{
-		balls:[
+		team:"",
+		batsmens: [],
+		bowlers: [],
+		overs:[
+			over1:{
+				balls:[
 			{
 				ball:"1",
 				batsman:{
@@ -9,7 +160,8 @@ innings:[
 					runs:2,
 					balls:1
 					four:0,
-					six:0
+					six:0,
+					out:false
 				},
 				bowler:{
 					name:"shami"
@@ -18,18 +170,27 @@ innings:[
 					wicket:0,
 					dismissal:"",
 					extras:{
-						runs:""
-						type:""
+						wide:0
+						noball:0
 					},
-					overs:"0.1"
+					over:"0.1",
+					isExtra:false
 				},
+				teamExtras:{
+					byes:0,
+					legByes:0
+				}
 				score:{
 					overs: 0.1,
 					runs: 2,
 					wickets: 0,
-					extras:""
+					extras:0
 				}
 			}
+			}
 		]
+				]
 	}
 ]
+
+{"overs":"10","firstInnings":{"team":"AUS","status":1,"batsmens":[{"name":"Warner"},{"name":"Finch"}],"bowlers":[{"name":"Shami"}],"balls":[{"ball":"1","batsman":{"name":"warner","slug":"batsman1","runs":2,"balls":1,"four":0,"six":0},"bowler":{"name":"shami","slug":"bowler1","runs":2,"wicket":0,"dismissal":"","extras":{"wide":0,"noball":0},"overs":"0.1"},"teamExtras":{"byes":0,"legByes":0},"score":{"overs":0.1,"runs":2,"wickets":0,"extras":0}}]},"secondInnings":{"team":"IND","status":0}}
